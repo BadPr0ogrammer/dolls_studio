@@ -2,10 +2,12 @@
 #define MAINVIEW_H
 
 #include <QskMainView.h>
-#include <QskMenu.h>
-#include <QskPushButton.h>
 
 #include "vtkitem.h"
+#include "mainheader.h"
+
+namespace DollsStudio
+{
 
 class MainView : public QskMainView
 {
@@ -14,11 +16,14 @@ public:
     MainView(QQuickItem* parent = nullptr);
     ~MainView();
 
-    void openMenu();
+    VtkItem* getVtkItem() { return m_vtk; }
+private:
+    VtkItem*    m_vtk = nullptr;
+    MainHeader* m_header = nullptr;
 
-    VtkItem*        _vtk;
-    QskMenu*        _menu;
-    QskPushButton*  _btnOpen;
+public slots:
+    void openFile();
 };
 
+}
 #endif

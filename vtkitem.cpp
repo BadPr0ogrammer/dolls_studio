@@ -31,6 +31,8 @@
 #include <vtkNamedColors.h>
 #include <vtkActorCollection.h>
 
+using namespace DollsStudio;
+
 vtkStandardNewMacro(VtkItem::Data)
 
 namespace fs = std::filesystem;
@@ -88,48 +90,35 @@ VtkItem::vtkUserData VtkItem::initializeVTK(vtkRenderWindow* renderWindow)
     _f3Engine = new f3d::engine(f3d::engine::createNone());
     _renderer = vtkSmartPointer<vtkRenderer>::New();
 
-    _f3Engine->getScene().clear();
-
-    //QString fname = _source.toLocalFile().toUtf8();
-    QString fname("catwalk.fbx");
-    _f3Engine->getScene().add(fname.toStdString());
-
-    auto actorCollection =_f3Engine->Internals->Scene->Internals->MetaImporter->GetImportedActors();
-    vtkCollectionSimpleIterator ait;
-    actorCollection->InitTraversal(ait);
-    while (auto* actor = actorCollection->GetNextActor(ait))
-        _renderer->AddActor(actor);
+    vtkNew<vtkActor> actor;
+    _renderer->AddActor(actor);
     _renderer->ResetCamera();
     _renderer->SetBackground(1,1,1);
 
     renderWindow->AddRenderer(_renderer);
 
-    //renderWindow->AddRenderer(_renderer);
-
     return vtk;
 }
-/*
-void VtkItem::setSource(const QUrl& url)//, bool forceVtk)
-{
-    if (_source != url)
-        emit sourceChanged();//(_source = url forceVtk = true,
 
-    //if (forceVtk)
+void VtkItem::openSource(QString fname)
+{
+    fileName = fname;
+
     dispatch_async(
     [this](vtkRenderWindow* renderWindow, vtkUserData userData)
     {
-        auto* vtk = Data::SafeDownCast(userData);
-        // clang-format off
+        _f3Engine->getScene().clear();
+        _f3Engine->getScene().add(fileName.toStdString());
 
-        vtk->mapper->SetInputConnection(
-            _source == "Cone"    ? vtk->cone->GetOutputPort()
-            : _source == "Sphere"  ? vtk->sphere->GetOutputPort()
-            : _source == "Capsule" ? vtk->capsule->GetOutputPort()
-                                   : (qWarning() << Q_FUNC_INFO << "YIKES!! Unknown source:'" << _source << "'", nullptr));
-        // clang-format on
+        auto actorCollection =_f3Engine->Internals->Scene->Internals->MetaImporter->GetImportedActors();
+        vtkCollectionSimpleIterator ait;
+        actorCollection->InitTraversal(ait);
+        while (auto* actor = actorCollection->GetNextActor(ait))
+            _renderer->AddActor(actor);
 
-        resetCamera();
+        _renderer->ResetCamera();
+        _renderer->SetBackground(1,1,1);
 
+        renderWindow->AddRenderer(_renderer);
     });
 }
-*/

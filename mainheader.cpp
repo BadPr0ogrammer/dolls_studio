@@ -1,0 +1,25 @@
+#include "mainheader.h"
+
+#include <QTranslator>
+
+namespace DollsStudio
+{
+
+MainHeader::MainHeader(QQuickItem* parent) : QskLinearBox(Qt::Horizontal, parent)
+{
+    setPaddingHint(QskBox::Panel, 5);
+
+    initSizePolicy(QskSizePolicy::Ignored, QskSizePolicy::Fixed);
+    setPanel(true);
+
+    m_btnOpen = new QskPushButton(tr("File"), this);
+
+    addStretch(10);
+}
+
+const QskPushButton* MainHeader::getBtnOpen()
+{
+    return m_btnOpen;
+}
+
+}

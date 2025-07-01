@@ -1,24 +1,47 @@
 #include "mainview.h"
 
+#include <QskLinearBox.h>
+#include <QskPushButton.h>
+#include <QskPageIndicator.h>
+
+#include <QFileDialog>
+#include <QApplication>
+#include <QCoreApplication>
+
+using namespace DollsStudio;
+
 MainView::MainView(QQuickItem* parent)
 {
-    _vtk = new VtkItem();
-    //_menu = new QskMenu(this);
-    //_btnOpen = new QskPushButton(this);
+    m_vtk = new VtkItem();
 
-    //setHeader(_menu);
-    QskControl* vtki = reinterpret_cast<QskControl*>(_vtk);
+    m_header = new MainHeader(this);
+    setHeader(m_header);
+
+    QskControl* vtki = reinterpret_cast<QskControl*>(m_vtk);
     setBody(vtki);
 
-    //connect(_btnOpen, &QskPushButton::pressed, this, &MainView::openMenu );
+    connect(m_header->getBtnOpen(), &QskPushButton::pressed, this, &MainView::openFile);
 }
 
 MainView::~MainView()
 {
-    delete _vtk;
+    delete m_vtk;
 }
 
-void MainView::openMenu()
+#if defined(__linux__) || defined(_WIN32)
+
+void MainView::openFile()
 {
+    QFileDialog dialog(QApplication::activeWindow());
+    dialog.setFileMode(QFileDialog::ExistingFile);
+    dialog.setNameFilter(tr("FBX (*.fbx);;All Files (*.*)"));
+    dialog.setViewMode(QFileDialog::Detail);
 
+    if (dialog.exec())
+    {
+        QStringList flist = dialog.selectedFiles();
+        getVtkItem()->openSource(flist[0]);
+    }
 }
+
+#endif

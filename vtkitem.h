@@ -19,6 +19,8 @@
 
 #include <engine.h>
 
+namespace DollsStudio
+{
 class VtkItem : public QQuickVTKItem
 {
     Q_OBJECT
@@ -31,16 +33,13 @@ public:
         static Data* New();
         vtkTypeMacro(Data, vtkObject);
     };
-    vtkUserData initializeVTK(vtkRenderWindow* renderWindow) override;
-    /*
-    QUrl source() const { return _source; }
-    void setSource(const QUrl& url);
 
-signals:
-    void sourceChanged();
+    vtkUserData initializeVTK(vtkRenderWindow* renderWindow) override;
+    void openSource(QString fname);
 private:
-    QUrl _source;
-    */
+    QString fileName;
 };
+
+}
 
 #endif // VTKITEM_H

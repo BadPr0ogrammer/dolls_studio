@@ -31,7 +31,7 @@ add_compile_definitions(ITEM_STATISTICS=1)
 add_compile_options(-O0)
 add_compile_options(-ffast-math)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Quick OpenGL)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Quick OpenGL Widgets)
 find_package(QSkinny REQUIRED COMPONENTS QSkinny)
 find_package(VTK REQUIRED)
 find_package(f3d REQUIRED COMPONENTS library)
@@ -51,18 +51,21 @@ qt_add_executable(${PROGNAME}
     support/SkinnyShortcut.h 
     support/DejaVuSans.qrc 
     support/Roboto.qrc 
-    support/SegoeUI.qrc 
+    support/SegoeUI.qrc
+    mainheader.h
+    mainheader.cpp
 
 )
 
 target_include_directories(${PROGNAME} PUBLIC /usr/local/include/f3d)
 
 target_link_libraries(${PROGNAME}
-    PUBLIC
+    PRIVATE
     Qt6::Core
     Qt6::Gui
     Qt6::Quick
     Qt6::OpenGL    
+    Qt6::Widgets
     ${VTK_LIBRARIES}
     assimp
     f3d

@@ -18,6 +18,7 @@
 #include <QDebug>
 #include <QGuiApplication>
 #include <QKeySequence>
+#include <QApplication>
 
 #include "vtkitem.h"
 #include "mainview.h"
@@ -32,9 +33,13 @@ int main( int argc, char* argv[] )
 #endif
     Qsk::addGraphicProvider("shapes", new SkinnyShapeProvider());
 
+#if defined(__linux__) || defined(_WIN32)
+    QApplication app(argc, argv);
+#else
     QGuiApplication app(argc, argv);
+#endif
 
-    MainView mainView;
+    DollsStudio::MainView mainView;
     QskWindow window;
     window.addItem(&mainView);
 
