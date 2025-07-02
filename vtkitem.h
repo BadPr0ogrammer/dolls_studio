@@ -25,19 +25,18 @@ class VtkItem : public QQuickVTKItem
 {
     Q_OBJECT
 public:
-    f3d::engine* _f3Engine = nullptr;
-    vtkSmartPointer<vtkRenderer> _renderer;
-
     struct Data : vtkObject
     {
+        f3d::engine* m_f3Engine = nullptr;
+        vtkSmartPointer<vtkRenderer> m_renderer;
+
         static Data* New();
         vtkTypeMacro(Data, vtkObject);
     };
+    QString m_fileName;
 
     vtkUserData initializeVTK(vtkRenderWindow* renderWindow) override;
     void openSource(QString fname);
-private:
-    QString fileName;
 };
 
 }

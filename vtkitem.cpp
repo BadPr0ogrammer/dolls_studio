@@ -4,6 +4,7 @@
 #include "engine.h"
 #include "scene_impl.h"
 #include "window_impl.h"
+#include "camera_impl.h"
 
 #include "animationManager.h"
 #include "interactor_impl.h"
@@ -15,6 +16,7 @@
 #include "vtkF3DMemoryMesh.h"
 #include "vtkF3DMetaImporter.h"
 #include "vtkF3DAssimpImporter.h"
+#include "vtkF3DRenderer.h"
 
 #include "vtkitem.h"
 
@@ -30,6 +32,14 @@
 #include <vtkRendererCollection.h>
 #include <vtkNamedColors.h>
 #include <vtkActorCollection.h>
+#include <vtkSmartPointer.h>
+#include <vtkRenderer.h>
+
+#include <QQuickWindow>
+#include <QQuickGraphicsDevice>
+#include <QOpenGLContext>
+#include <QQuickPaintedItem>
+#include <QOpenGLFunctions>
 
 using namespace DollsStudio;
 
@@ -83,42 +93,67 @@ public:
 };
 }
 
+
+namespace f3d::detail
+{
+class window_impl::internals
+{
+public:
+    explicit internals(const options& options);
+    static context::fptr SymbolLoader(void* userptr, const char* name);
+    static vtkSmartPointer<vtkRenderWindow> AutoBackendWindow();
+
+    std::unique_ptr<camera_impl> Camera;
+    vtkSmartPointer<vtkRenderWindow> RenWin;
+    vtkNew<vtkF3DRenderer> Renderer;
+    const options& Options;
+    interactor_impl* Interactor = nullptr;
+    fs::path CachePath;
+    context::function GetProcAddress;
+};
+}
+
+
 VtkItem::vtkUserData VtkItem::initializeVTK(vtkRenderWindow* renderWindow)
 {    
     vtkNew<Data> vtk;
 
-    _f3Engine = new f3d::engine(f3d::engine::createNone());
-    _renderer = vtkSmartPointer<vtkRenderer>::New();
+    f3d::context::function loadFunc = [&](const char* name) {
+        QOpenGLContext *ctx = QOpenGLContext::currentContext();
+        return ctx->getProcAddress(name);
+    };
+    vtk->m_f3Engine = new f3d::engine(f3d::engine::createExternal(loadFunc));
+    vtk->m_renderer = vtk->m_f3Engine->Internals->Window->Internals->Renderer;
 
     vtkNew<vtkActor> actor;
-    _renderer->AddActor(actor);
-    _renderer->ResetCamera();
-    _renderer->SetBackground(1,1,1);
+    vtk->m_renderer->AddActor(actor);
+    vtk->m_renderer->ResetCamera();
+    vtk->m_renderer->SetBackground(1,1,1);
 
-    renderWindow->AddRenderer(_renderer);
+    renderWindow->AddRenderer(vtk->m_renderer);
 
     return vtk;
 }
 
 void VtkItem::openSource(QString fname)
 {
-    fileName = fname;
+    m_fileName = fname;
 
-    dispatch_async(
-    [this](vtkRenderWindow* renderWindow, vtkUserData userData)
-    {
-        _f3Engine->getScene().clear();
-        _f3Engine->getScene().add(fileName.toStdString());
+    dispatch_async([this](vtkRenderWindow* renderWindow, vtkUserData userData)
+    {            
+        Data* vtk = (Data*)userData.GetPointer();
+        vtk->m_f3Engine->getScene().clear();
+        vtk->m_f3Engine->getScene().add(m_fileName.toStdString());
 
-        auto actorCollection =_f3Engine->Internals->Scene->Internals->MetaImporter->GetImportedActors();
+        auto actorCollection = vtk->m_f3Engine->Internals->Scene->Internals->MetaImporter->GetImportedActors();
         vtkCollectionSimpleIterator ait;
         actorCollection->InitTraversal(ait);
         while (auto* actor = actorCollection->GetNextActor(ait))
-            _renderer->AddActor(actor);
+            vtk->m_renderer->AddActor(actor);
 
-        _renderer->ResetCamera();
-        _renderer->SetBackground(1,1,1);
+        vtk->m_renderer->ResetCamera();
+        vtk->m_renderer->SetBackground(1,1,1);
 
-        renderWindow->AddRenderer(_renderer);
+        renderWindow->AddRenderer(vtk->m_renderer);
     });
 }

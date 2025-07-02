@@ -1,8 +1,3 @@
-/******************************************************************************
- * QSkinny - Copyright (C) The authors
- *           SPDX-License-Identifier: BSD-3-Clause
- *****************************************************************************/
-
 #include <SkinnyShapeProvider.h>
 #include <SkinnyShortcut.h>
 

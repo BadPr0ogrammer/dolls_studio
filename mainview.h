@@ -16,13 +16,12 @@ public:
     MainView(QQuickItem* parent = nullptr);
     ~MainView();
 
-    VtkItem* getVtkItem() { return m_vtk; }
-private:
     VtkItem*    m_vtk = nullptr;
     MainHeader* m_header = nullptr;
 
 public slots:
     void openFile();
+    void startAnim();
 };
 
 }

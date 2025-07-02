@@ -14,10 +14,8 @@ class MainHeader : public QskLinearBox
 public:
     MainHeader(QQuickItem* parent);
 
-    const QskPushButton* getBtnOpen();
-
-private:
     QskPushButton*  m_btnOpen = nullptr;
+    QskPushButton*  m_btnAnim = nullptr;
 };
 
 }

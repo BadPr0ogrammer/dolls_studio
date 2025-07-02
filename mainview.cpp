@@ -20,12 +20,12 @@ MainView::MainView(QQuickItem* parent)
     QskControl* vtki = reinterpret_cast<QskControl*>(m_vtk);
     setBody(vtki);
 
-    connect(m_header->getBtnOpen(), &QskPushButton::pressed, this, &MainView::openFile);
+    connect(m_header->m_btnOpen, &QskPushButton::pressed, this, &MainView::openFile);
 }
 
 MainView::~MainView()
 {
-    delete m_vtk;
+    //delete m_vtk;
 }
 
 #if defined(__linux__) || defined(_WIN32)
@@ -40,8 +40,13 @@ void MainView::openFile()
     if (dialog.exec())
     {
         QStringList flist = dialog.selectedFiles();
-        getVtkItem()->openSource(flist[0]);
+        m_vtk->openSource(flist[0]);
     }
 }
 
 #endif
+
+void MainView::startAnim()
+{
+    //m_vtk->m_f3Engine->getInteractor().startAnimation();
+}
