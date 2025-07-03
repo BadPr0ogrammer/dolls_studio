@@ -21,11 +21,11 @@ MainView::MainView(QQuickItem* parent)
     setBody(vtki);
 
     connect(m_header->m_btnOpen, &QskPushButton::pressed, this, &MainView::openFile);
+    connect(m_header->m_btnAnim, &QskPushButton::pressed, this, &MainView::startAnim);
 }
 
 MainView::~MainView()
 {
-    //delete m_vtk;
 }
 
 #if defined(__linux__) || defined(_WIN32)
@@ -48,5 +48,5 @@ void MainView::openFile()
 
 void MainView::startAnim()
 {
-    //m_vtk->m_f3Engine->getInteractor().startAnimation();
+    m_vtk->startAnim();
 }

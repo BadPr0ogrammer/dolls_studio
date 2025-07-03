@@ -12,7 +12,6 @@
 
 #include <QDebug>
 #include <QGuiApplication>
-#include <QKeySequence>
 #include <QApplication>
 
 #include "vtkitem.h"
@@ -21,7 +20,7 @@
 int main( int argc, char* argv[] )
 {
     QQuickVTKItem::setGraphicsApi();
-    f3d::engine::autoloadPlugins();
+    //f3d::engine::autoloadPlugins();
 
 #ifdef ITEM_STATISTICS
     QskObjectCounter counter( true );

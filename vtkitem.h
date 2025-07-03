@@ -11,13 +11,12 @@
 #include <vtkRenderWindow.h>
 #include <vtkPolyData.h>
 #include <vtkPolyDataMapper.h>
-#include <vtkRenderer.h>
 #include <vtkObjectFactory.h>
 #include <vtkCallbackCommand.h>
 
 #include <QString>
 
-#include <engine.h>
+#include "engine.h"
 
 namespace DollsStudio
 {
@@ -27,16 +26,19 @@ class VtkItem : public QQuickVTKItem
 public:
     struct Data : vtkObject
     {
-        f3d::engine* m_f3Engine = nullptr;
-        vtkSmartPointer<vtkRenderer> m_renderer;
+        //std::unique_ptr<f3d::engine> m_engine;
+         //vtkSmartPointer<vtkF3DRenderer> m_renderer;
+        std::unique_ptr<f3d_engine> m_engine;
 
         static Data* New();
         vtkTypeMacro(Data, vtkObject);
     };
-    QString m_fileName;
+    QString m_fname;
 
     vtkUserData initializeVTK(vtkRenderWindow* renderWindow) override;
+
     void openSource(QString fname);
+    void startAnim();
 };
 
 }
