@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\user\dolls_studio\build\dolls_studio_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files\Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\page.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\listboxpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\tabview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\mainview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\menufilebutton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\header.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\gridlayoutpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\sysdlgs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\vtkitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\build\dolls_studio_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files\Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\build\dolls_studio_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files\Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\build\dolls_studio_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files\Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\animationManager.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\camera_impl.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\context.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\factory.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\levenshtein.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\init.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\image.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\log.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\options.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\plugin.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\scene_impl.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\utils.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\window_impl.cxx">
+      <Filter>Source Files\f3d</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\F3D\F3DUtils.cxx">
+      <Filter>Source Files\f3d\F3D</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\F3D\F3DLog.cxx">
+      <Filter>Source Files\f3d\F3D</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\F3D\F3DDefaultHDRI.cxx">
+      <Filter>Source Files\f3d\F3D</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\F3D\F3DColoringInfoHandler.cxx">
+      <Filter>Source Files\f3d\F3D</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DAssimpImporter.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSort.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSortFunctions.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSortGlobalDisperseCS.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSortGlobalFlipCS.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSortLocalDisperseCS.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSortLocalSortCS.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DCachedLUTTexture.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DCachedSpecularTexture.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DComputeDepthCS.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DConsoleOutputWindow.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DExternalRenderWindow.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DGenericImporter.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DHexagonalBokehBlurPass.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DImporter.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DInteractorEventRecorder.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DInteractorStyle.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DMemoryMesh.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DMetaImporter.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DNoRenderWindow.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DObjectFactory.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DOpenGLGridMapper.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DOverlayRenderPass.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DPointSplatMapper.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DPolyDataMapper.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DPostProcessFilter.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DRenderer.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DRenderPass.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DSolidBackgroundPass.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DUserRenderPass.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DWGLRenderWindow.cxx">
+      <Filter>Source Files\f3d\vtk</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\user\dolls_studio\page.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\tabview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\mainview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\menufilebutton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\gridlayoutpage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\sysdlgs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\vtkitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\animationManager.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\camera_impl.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\context.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\factory.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\image.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\init.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\levenshtein.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\log.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\options.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\plugin.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\scene_impl.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\utils.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\window_impl.h">
+      <Filter>Header Files\f3d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\F3D\F3DColoringInfoHandler.h">
+      <Filter>Header Files\f3d\F3D</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\F3D\F3DDefaultHDRI.h">
+      <Filter>Header Files\f3d\F3D</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\F3D\F3DLog.h">
+      <Filter>Header Files\f3d\F3D</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\F3D\F3DUtils.h">
+      <Filter>Header Files\f3d\F3D</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DAssimpImporter.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSort.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSortFunctions.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSortGlobalDisperseCS.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSortGlobalFlipCS.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSortLocalDisperseCS.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DBitonicSortLocalSortCS.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DCachedLUTTexture.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DCachedSpecularTexture.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DComputeDepthCS.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DConsoleOutputWindow.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DExternalRenderWindow.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DGenericImporter.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DHexagonalBokehBlurPass.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DImporter.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DInteractorEventRecorder.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DInteractorStyle.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DMemoryMesh.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DMetaImporter.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DNoRenderWindow.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DObjectFactory.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DOpenGLGridMapper.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DOverlayRenderPass.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DPointSplatMapper.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DPolyDataMapper.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DPostProcessFilter.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DRenderer.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DRenderPass.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DSolidBackgroundPass.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DUserRenderPass.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\f3d\vtk\vtkF3DWGLRenderWindow.h">
+      <Filter>Header Files\f3d\vtk</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\dolls_studio\listboxpage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\user\dolls_studio\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6D2CE9D6-6BC8-3687-8EFB-0FBAE271C09C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4A4AE79A-14EC-36E4-9462-5A64E13D871A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Generated">
+      <UniqueIdentifier>{4FEA178F-CFE9-32B8-8612-2954966E233F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\f3d">
+      <UniqueIdentifier>{7da1b983-69d5-4791-8ebe-da30e6d309f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\f3d\F3D">
+      <UniqueIdentifier>{bf9e62f8-7110-47f4-9508-c5a90c4625f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\f3d\vtk">
+      <UniqueIdentifier>{f0144eba-55f1-43a6-9661-e44a83f460c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\f3d">
+      <UniqueIdentifier>{8797570d-336b-4d4f-bacb-663a416b3c90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\f3d\F3D">
+      <UniqueIdentifier>{9ea0fc2b-2635-4ac2-9418-18a2c846e54d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\f3d\vtk">
+      <UniqueIdentifier>{d4c1677a-71e6-4558-a8e5-8e12050b5152}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
